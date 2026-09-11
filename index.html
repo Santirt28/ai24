@@ -4,58 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+        <style>
+            nav { font-family: "Work Sans", sans-serif; }
+            nav span { font-family: "Fraunces", serif; }
+        </style>
+
   </head>
-  <body>
+    <body>
     <header>
-        <nav id="navigation">
-            <a href="index.html">Urban Latin</a>
-            <div id="nav-text">
-                <ul>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About</a></li>
+        <nav id="navigation" class="sticky top-0 z-20 flex w-full items-center justify-between border-b border-[#C79A4B]/30 bg-[#1B1712] px-6 py-4 text-[#EDE6D6] md:py-8 lg:py-12">
+            <p class="flex items-center px-0 sm:px-4 md:px-12 lg:px-24">
+                <span class="text-3xl font-semibold whitespace-nowrap text-[#EDE6D6] sm:text-4xl md:text-5xl">Urban Latin</span>
+            </p>
+            <button id="menu-toggle" type="button" class="rounded p-2 text-2xl text-[#C79A4B] md:hidden" aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <div id="navMenu" class="hidden w-full md:block md:w-auto">
+                <ul class="mt-4 flex flex-col p-0 text-lg font-medium md:mt-0 md:flex-row md:items-center md:space-x-8">
+                    <li><a href="menu.html" class="block rounded px-3 py-2 text-[#EDE6D6] hover:bg-[#7A2436] hover:text-[#EDE6D6] md:p-0 md:hover:bg-transparent md:hover:text-[#C79A4B]">Menu</a></li>
+                    <li><a href="contact.html" class="block rounded px-3 py-2 text-[#EDE6D6] hover:bg-[#7A2436] hover:text-[#EDE6D6] md:p-0 md:hover:bg-transparent md:hover:text-[#C79A4B]">Contact</a></li>
+                    <li><a href="about.html" class="block rounded px-3 py-2 text-[#EDE6D6] hover:bg-[#7A2436] hover:text-[#EDE6D6] md:p-0 md:hover:bg-transparent md:hover:text-[#C79A4B]">About</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main id="hero" >
+    <main id="hero" class="grid gap-12 bg-[#1B1712] px-6 pb-16 pt-32 text-[#EDE6D6] sm:px-10 md:px-16 lg:grid-cols-2 lg:px-24">
         <section id="urban-latin">
-            <h1>Urban Latin</h1>
-            <p>
+            <h1 class="mb-6 font-['Fraunces'] text-3xl leading-none text-[#EDE6D6] sm:text-4xl lg:text-[5rem]">Urban Latin</h1>
+            <p class="text-xl sm:text-2xl">
                 The best of latin america, serve in one place, mixting our culture with elegance and style.
             </p>
         </section>
         <section id="featured-dishes">
-            <h2>Featured Dishes</h2>
-            <ul>
-                <li>
-                    <h3>Ropa Vieja</h3>
-                    <p>Slow-cooked shredded beef with vegetables and spices.</p>
+            <h2 class="mb-6 font-['Fraunces'] text-base leading-none text-[#EDE6D6] sm:text-lg lg:text-[2.5rem]">Featured Dishes</h2>
+            <p class="pb-12 text-xl sm:text-2xl">
+                The best of the best.
+            </p>
+            <ul class="divide-y divide-[#C79A4B]/30 font-['Work_Sans']">
+                <li class="py-2">
+                    <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Ropa Vieja</h3>
+                    <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">Slow-cooked shredded beef with vegetables and spices.<span class="whitespace-nowrap"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>45.99</span></p>
                 </li>
-                <li>
-                    <h3>Bandeja Paisa</h3>
-                    <p>A traditional Colombian plate with beans, rice, plantain, and meat.</p>
+                <li class="py-2">
+                    <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Bandeja Paisa</h3>
+                    <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">A traditional Colombian plate with beans, rice, plantain, and meat.<span class="whitespace-nowrap"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>39.99</span></p>
                 </li>
-                <li>
-                    <h3>Ceviche Peruano</h3>
-                    <p>Fresh fish marinated with lime, onion, and herbs.</p>
+                <li class="py-2">
+                    <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Ceviche Peruano</h3>
+                    <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">Fresh fish marinated with lime, onion, and herbs.<span class="whitespace-nowrap"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>49.99</span></p>
                 </li>
-                <li>
-                    <h3>Pabellon</h3>
-                    <p>Venezuelan shredded beef served with black beans, rice, and plantain.</p>
+                <li class="py-2">
+                    <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Pabellon</h3>
+                    <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">Venezuelan shredded beef served with black beans, rice, and plantain.<span class="whitespace-nowrap"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>45.99</span></p>
                 </li>
             </ul>
         </section>
-        <section id="location">
+        <section id="location" class="lg:col-start-1 text-xl sm:text-2xl py-24">
             <h2>Visit Us</h2>
             <p>123 Main Street, Salt Lake City, Utah</p>   
             <p>Mon-Sun 12:00 PM - 10:00 PM</p>
         </section>
+        <section id="hero-pic" class="mx-auto aspect-[3/4] w-3/4 lg:col-start-2 lg:row-start-1 lg:row-span-3 lg:ml-auto lg:mr-0">
+            <img src="images/hero-pic.png" alt="A delicious Latin American dish" class="h-full w-full rounded-lg object-contain shadow-lg" />
+        </section>
     </main>
-    <footer>
+    <footer class="border-t border-[#C79A4B]/30 bg-[#1B1712] px-6 py-8 text-[#EDE6D6]">
         <p>&copy; 2026 Urban Latin. Yhofre Rodrigeuez. All rights reserved.</p>
     </footer>
+        <script src="js/script.js"></script>
   </body>
 </html>

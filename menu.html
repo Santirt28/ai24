@@ -4,72 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+        <style>
+            nav { font-family: "Work Sans", sans-serif; }
+            nav span { font-family: "Fraunces", serif; }
+        </style>
+        
   </head>
   <body>
     <header>
-        <nav id="navigation">
-            <p>
-                <span>Urban Latin</span>
+        <nav id="navigation" class="sticky top-0 z-20 flex items-center justify-between border-b border-[#C79A4B]/30 bg-[#1B1712] px-6 py-4 text-[#EDE6D6] md:py-8 lg:py-12">
+            <p class="flex items-center px-0 sm:px-4 md:px-12 lg:px-24">
+                <span class="text-3xl font-semibold whitespace-nowrap text-[#EDE6D6] sm:text-4xl md:text-5xl">Urban Latin</span>
             </p>
-            <div id="nav-text">
-                <ul>
-                    <li><a href="index.html">Principal</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="about.html">About</a></li>
+            <button id="menu-toggle" type="button" class="rounded p-2 text-2xl text-[#C79A4B] md:hidden" aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <div id="navMenu" class="hidden w-full md:block md:w-auto">
+                <ul class="mt-4 flex flex-col p-0 text-lg font-medium md:mt-0 md:flex-row md:items-center md:space-x-8">
+                    <li><a href="index.html" class="block rounded px-3 py-2 text-[#EDE6D6] hover:bg-[#7A2436] hover:text-[#EDE6D6] md:p-0 md:hover:bg-transparent md:hover:text-[#C79A4B]">Principal</a></li>
+                    <li><a href="contact.html" class="block rounded px-3 py-2 text-[#EDE6D6] hover:bg-[#7A2436] hover:text-[#EDE6D6] md:p-0 md:hover:bg-transparent md:hover:text-[#C79A4B]">Contact</a></li>
+                    <li><a href="about.html" class="block rounded px-3 py-2 text-[#EDE6D6] hover:bg-[#7A2436] hover:text-[#EDE6D6] md:p-0 md:hover:bg-transparent md:hover:text-[#C79A4B]">About</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
+    <main class="bg-[#1B1712] px-6 pb-16 pt-12 text-[#EDE6D6] sm:px-10 md:px-16 lg:px-24">
         <section id="menu">
-            <h1>Our Menu</h1>
-            <p>Discover the best flavors of Latin America with our dishes.</p>
-            <section id="cuba">
+            <h1 class="mb-6 pt-12 font-['Fraunces'] text-base leading-none text-[#EDE6D6] sm:text-lg lg:text-[2.5rem]">Our Menu</h1>
+            <p class="pb-12 text-xl sm:text-2xl">Discover the best flavors of Latin America with our dishes.</p>
+            <section id="cuba" class="border-b border-[#C79A4B]/30 py-2">
                 <h2>Cuba</h2>
-                <h3>Ropa Vieja</h3>
-                <p>Slow-cooked shredded beef with vegetables and spices.</p>
+                <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Ropa Vieja</h3>
+                <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">Slow-cooked shredded beef with vegetables and spices.<span class="text-5xl font-bold text-[#EDE6D6]"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>45.99</span></p>
+                <img src="images/food1.jpg" alt="A delicious Latin American dish" class="mt-4 block h-80 w-full max-w-md rounded-lg border border-[#C79A4B]/30 object-cover shadow-lg sm:h-96" />
             </section>
-            <section id="colombia">
+            <section id="colombia" class="border-b border-[#C79A4B]/30 py-2">
                 <h2>Colombia</h2>
-                <h3>Bandeja Paisa</h3>
-                <p>A traditional Colombian plate with beans, rice, plantain, and meat.</p>
+                <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Bandeja Paisa</h3>
+                <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">A traditional Colombian plate with beans, rice, plantain, and meat.<span class="text-5xl font-bold text-[#EDE6D6]"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>39.99</span></p>
+                <img src="images/food2.jpg" alt="A delicious Latin American dish" class="mt-4 block h-80 w-full max-w-md rounded-lg border border-[#C79A4B]/30 object-cover shadow-lg sm:h-96" />
             </section>
-            <section id="peru">
+            <section id="peru" class="border-b border-[#C79A4B]/30 py-2">
                 <h2>Peru</h2>
-                <h3>Ceviche Peruano</h3>
-                <p>Fresh fish marinated with lime, onion, and herbs.</p>
+                <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Ceviche Peruano</h3>
+                <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">Fresh fish marinated with lime, onion, and herbs.<span class="text-5xl font-bold text-[#EDE6D6]"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>49.99</span></p>
+                <img src="images/food3.jpg" alt="A delicious Latin American dish" class="mt-4 block h-80 w-full max-w-md rounded-lg border border-[#C79A4B]/30 object-cover shadow-lg sm:h-96" />
             </section>
-            <section id="venezuela">
+            <section id="venezuela" class="border-b border-[#C79A4B]/30 py-2">
                 <h2>Venezuela</h2>
-                <h3>Pabellon</h3>
-                <p>Venezuelan shredded beef served with black beans, rice, and plantain.</p>
+                <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Pabellon</h3>
+                <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">Venezuelan shredded beef served with black beans, rice, and plantain.<span class="text-5xl font-bold text-[#EDE6D6]"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>45.99</span></p>
+                <img src="images/food4.jpg" alt="A delicious Latin American dish" class="mt-4 block h-80 w-full max-w-md rounded-lg border border-[#C79A4B]/30 object-cover shadow-lg sm:h-96" />   
             </section>
-            <section id="mexico">
+            <section id="mexico" class="border-b border-[#C79A4B]/30 py-2">
                 <h2>Mexico</h2>
-                <h3>Tacos al Pastor</h3>
-                <p>Marinated pork served with pineapple, onion, cilantro, and corn tortillas.</p>
+                <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Tacos al Pastor</h3>
+                <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">Marinated pork served with pineapple, onion, cilantro, and corn tortillas.<span class="text-5xl font-bold text-[#EDE6D6] "><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>36.99</span></p>
+                <img src="images/food5.jpg" alt="A delicious Latin American dish" class="mt-4 block h-80 w-full max-w-md rounded-lg border border-[#C79A4B]/30 object-cover shadow-lg sm:h-96" />
             </section>
-            <section id="argentina">
+            <section id="argentina" class="border-b border-[#C79A4B]/30 py-2">
                 <h2>Argentina</h2>
-                <h3>Empanadas Argentinas</h3>
-                <p>Seasoned beef baked inside a golden, homemade pastry.</p>
+                <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Empanadas Argentinas</h3>
+                <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">Seasoned beef baked inside a golden, homemade pastry.<span class="text-5xl font-bold text-[#EDE6D6]"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>34.99</span></p>
+                <img src="images/food6.jpg" alt="A delicious Latin American dish" class="mt-4 block h-80 w-full max-w-md rounded-lg border border-[#C79A4B]/30 object-cover shadow-lg sm:h-96" />
             </section>
-            <section id="brazil">
+            <section id="brazil" class="border-b border-[#C79A4B]/30 py-2">
                 <h2>Brazil</h2>
-                <h3>Feijoada</h3>
-                <p>A comforting stew of black beans, pork, and traditional Brazilian spices.</p>
+                <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Feijoada</h3>
+                <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">A comforting stew of black beans, pork, and traditional Brazilian spices.<span class="text-5xl font-bold text-[#EDE6D6]"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>41.99</span></p>
+                <img src="images/food7.jpg" alt="A delicious Latin American dish" class="mt-4 block h-80 w-full max-w-md rounded-lg border border-[#C79A4B]/30 object-cover shadow-lg sm:h-96" />
             </section>
-            <section id="chile">
+            <section id="chile" class="border-b border-[#C79A4B]/30 py-2">
                 <h2>Chile</h2>
-                <h3>Pastel de Choclo</h3>
-                <p>A baked corn casserole filled with seasoned beef, chicken, and olives.</p>
+                <h3 class="text-2xl font-semibold text-[#C79A4B] sm:text-3xl">Pastel de Choclo</h3>
+                <p class="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-4">A baked corn casserole filled with seasoned beef, chicken, and olives.<span class="text-5xl font-bold text-[#EDE6D6]"><i class="fa-solid fa-dollar-sign" aria-hidden="true"></i>39.99</span></p>
+                <img src="images/food8.jpg" alt="A delicious Latin American dish" class="mt-4 block h-80 w-full max-w-md rounded-lg border border-[#C79A4B]/30 object-cover shadow-lg sm:h-96" />
             </section>
         </section>
     </main>
-    <footer>
+    <footer class="border-t border-[#C79A4B]/30 bg-[#1B1712] px-6 py-8 text-[#EDE6D6]">
         <p>&copy; 2026 Urban Latin. Yhofre Rodrigeuez. All rights reserved.</p>
     </footer>
+        <script src="js/script.js"></script>
   </body>
 </html>

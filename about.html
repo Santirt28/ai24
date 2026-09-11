@@ -4,46 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      nav { font-family: "Work Sans", sans-serif; }
+      nav span { font-family: "Fraunces", serif; }
+    </style>
+
   </head>
   <body>
     <header>
-        <nav id="navigation">
-            <p>
-                <span>Urban Latin</span>
+        <nav id="navigation" class="sticky top-0 z-20 flex items-center justify-between border-b border-[#C79A4B]/30 bg-[#1B1712] px-6 py-4 text-[#EDE6D6] md:py-8 lg:py-12">
+            <p class="flex items-center px-0 sm:px-4 md:px-12 lg:px-24">
+                <span class="text-3xl font-semibold whitespace-nowrap text-[#EDE6D6] sm:text-4xl md:text-5xl">Urban Latin</span>
             </p>
-            <div id="nav-text">
-                <ul>
-                    <li><a href="index.html">Principal</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    
+            <button id="menu-toggle" type="button" class="rounded p-2 text-2xl text-[#C79A4B] md:hidden" aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <div id="navMenu" class="hidden w-full md:block md:w-auto">
+                <ul class="mt-4 flex flex-col p-0 text-lg font-medium md:mt-0 md:flex-row md:items-center md:space-x-8">
+                    <li><a href="index.html" class="block rounded px-3 py-2 text-[#EDE6D6] hover:bg-[#7A2436] hover:text-[#EDE6D6] md:p-0 md:hover:bg-transparent md:hover:text-[#C79A4B]">Principal</a></li>
+                    <li><a href="menu.html" class="block rounded px-3 py-2 text-[#EDE6D6] hover:bg-[#7A2436] hover:text-[#EDE6D6] md:p-0 md:hover:bg-transparent md:hover:text-[#C79A4B]">Menu</a></li>
+                    <li><a href="contact.html" class="block rounded px-3 py-2 text-[#EDE6D6] hover:bg-[#7A2436] hover:text-[#EDE6D6] md:p-0 md:hover:bg-transparent md:hover:text-[#C79A4B]">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
+    <main class="bg-[#1B1712] px-6 pb-16 pt-12 text-[#EDE6D6] sm:px-10 md:px-16 lg:px-24">
         <section id="history">
-            <h1>About Urban Latin History</h1>
-            <p>Urban Latin was born from the idea of a programmer just beginning his journey, with a passion for diverse food, creativity, and style. What started as a simple idea became a project that brings together the best of three different worlds.</p>
-            <p>Our goal is to create an experience where food, culture, and modern style come together in one place. We represent creativity, diversity, and a passion for sharing unique flavors inspired by Latin culture.</p>
-            <p>Born from passion and built with creativity, it officially launched on September 11, 2026, in Lehi, Utah.</p>
-            <p>Welcome to a place where flavor, culture, and style come together.</p>
+            <h1 class="mb-6 pt-24 pb-4 font-['Fraunces'] text-3xl leading-none text-[#EDE6D6] sm:text-4xl lg:text-[5rem]">About Urban Latin History</h1>
+            <p class="text-xl sm:text-2xl">Urban Latin was born from the idea of a programmer just beginning his journey, with a passion for diverse food, creativity, and style. What started as a simple idea became a project that brings together the best of three different worlds.</p>
+            <p class="text-xl sm:text-2xl">Our goal is to create an experience where food, culture, and modern style come together in one place. We represent creativity, diversity, and a passion for sharing unique flavors inspired by Latin culture.</p>
+            <p class="text-xl sm:text-2xl">Born from passion and built with creativity, it officially launched on September 11, 2026, in Lehi, Utah.</p>
+            <p class="text-xl sm:text-2xl pb-24">Welcome to a place where flavor, culture, and style come together.</p>
         </section>
     <section id="visit-us">
-        <h2>Visit Us</h2>
-    </section>
-    <section id="recipes-by-country">
-        <h2>Recipes by Country</h2>
-    </section>
-    <section id="todays-specials">
-        <h2>Today's Specials</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 px-7 py-6">
+
+            <a href="contact.html" class="bg-[#2A241D] rounded p-4 text-center hover:opacity-80">
+                <i class="fa-solid fa-location-dot text-[#C79A4B] text-xl"></i>
+                <h2 class="text-[#EDE6D6] text-sm mt-2">Visit Us</h2>
+            </a>
+
+            <a href="menu.html" class="bg-[#2A241D] rounded p-4 text-center hover:opacity-80">
+                <i class="fa-solid fa-map text-[#C79A4B] text-xl"></i>
+                <h2 class="text-[#EDE6D6] text-sm mt-2">Recipes by Country</h2>
+            </a>
+
+            <a href="index.html" class="bg-[#2A241D] rounded p-4 text-center hover:opacity-80">
+                <i class="fa-solid fa-star text-[#C79A4B] text-xl"></i>
+                <h2 class="text-[#EDE6D6] text-sm mt-2">Today's Specials</h2>
+            </a>
+
+        </div>
     </section>
     
     </main>
-    <footer>
+    <footer class="border-t border-[#C79A4B]/30 bg-[#1B1712] px-6 py-8 text-[#EDE6D6]">
         <p>&copy; 2026 Urban Latin. Yhofre Rodrigeuez. All rights reserved.</p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
